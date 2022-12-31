@@ -1,0 +1,989 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+/* navbar styling */
+.navbar{
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu li:last-child{
+    border: 1px solid #eca30a;
+    border-radius: 50px;
+    padding: 10px 30px 10px 0;
+}
+.navbar .logo a{
+    color: rgba(255, 255, 255, 0.545);
+    font-size: 18px;
+    font-weight: 600;
+}
+.navbar .logo i{
+    font-size: 35px;
+    color: #eca328;
+}
+.navbar .logo a span{
+    color: #ffffff6c;
+    position: absolute;
+    top: 40%;
+    font-weight: 100;
+    transition: all 0.3s ease;
+}
+.navbar .logo a span::after{
+    content: "Welcome";
+    position: absolute;
+    top: 60%;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #eca30a;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: skyblue;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: black;
+    z-index: 9999;
+    font-size: 40px;
+    border-radius: 50%;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 80px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("image/Home.png") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content{
+    padding-top: 4em;
+    width: 100%;
+    margin-left: 5.5em;
+}
+.home .home-content h2{
+    font-size: 25px;
+    font-weight: 100;
+}
+.home .home-content h1{
+    font-size: 75px;
+    font-weight: 600;
+}
+.home .home-content p{
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 10px;
+    text-align: justify;
+    letter-spacing: .1em;
+    margin: 5px 0;
+}
+.home .home-content h1 span{
+    color: #eca328;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.home  .social{
+    display: flex;
+    flex-direction: column;
+    top: 55%;
+    left: 8%;
+    position: absolute;
+}
+.home .social a{
+    background: #eca328;
+    color: #052214;
+    font-size: 20px;
+    padding: 8px ;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+.intro-scroll{
+    position: absolute;
+    left: 15%;
+    top: 90%;
+}
+.intro-scroll a{
+    color: white;
+    position: relative;
+  }
+  .intro-scroll a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 3px;
+    height: 50px;
+    background-color: white;
+  }
+
+
+
+
+@media (max-width: 947px){
+    .home .home-content{
+        margin-left:-.5em;
+    }
+    .home .home-content h2{
+        font-size: 20px;
+    }
+    .home .home-content h1{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .home p{
+        font-size: 18px;
+    }
+    .home .social{
+        display: inline-block;
+        margin-top: 130px;
+    }
+    .home .social a{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 690px) {
+   
+    .home .home-content h2{
+        font-size: 20px;
+    }
+    .home .home-content h1{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content h2{
+        font-size: 18px;
+    }
+    .home .home-content h1{
+        font-size: 25px;
+    }
+
+}
+
+
+
+
+
+
+/* about section styling */
+.about {
+    display: flex;
+    background: url("image/4.png") no-repeat center;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.623);
+    min-height: 500px;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    font-family: "Be Vietnam Pro";
+}
+.about .about-content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20em;
+    margin-top: -14em;
+}
+.about .about-content p{
+    position: absolute;
+    top: 700px;
+    left: 90%;
+    color: #ffffff6c;
+}
+.about .about-content p::before{
+    position: absolute;
+    top: 50%;
+    content: "about";
+    left: 100%;
+}
+.about .about-content .head{
+    color: #f7941e;
+    font-size: 60px;
+    font-weight: 800;
+    font-style: normal;
+    padding: 20px 0;
+}
+.about .about-content h1{
+    font-size: 16px;
+    font-weight: 100;
+    padding-bottom: 10px;
+  }
+  .about .about-content h2{
+    font-size: 20px;
+    width: 80%;
+    letter-spacing: .1em;
+    font-weight: 100;
+  }
+
+
+
+  @media (max-width: 947px){
+    .about .about-content{
+        margin-left:0;
+        margin-top: 20px;
+        color: white;
+    }
+    .about .about-content h2{
+        font-size: 20px;
+        padding: 0;
+    }
+    .about .about-content .head{
+        font-size: 35px;
+        padding: 0;
+    }
+    .about .about-content h2{
+        font-size: 18px;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .about p{
+        margin-left: -3em;
+    }
+}
+
+@media (max-width: 690px) {
+   
+    .about .about-content h2{
+        font-size: 15px;
+    }
+    .about .about-content .head{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about .about-content h2{
+        font-size: 18px;
+    }
+    .home .home-content .head{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+  .resume {
+    display: flex;
+    background: #052214;
+    height: auto;
+    color: rgba(255, 255, 255, 0.623);
+    min-height: 500px;
+    font-family: "Be Vietnam Pro";
+}
+    .resume .top{
+        position: absolute;
+        left: 5%;
+    }
+    .resume .top p{
+        font-size: 15px;
+    }
+    .resume .top p::before{
+        content: "resume";
+        position: absolute;
+        top:20% ;
+        left: 20%;
+    }
+    .resume .top h3::before{
+        content: "skills";
+        font-weight: 100;
+        position: absolute;
+        top:100% ;
+        left: 8%;
+    }
+    .resume .resume-content{
+        padding-left: 90px;
+        margin-top: 90px;
+    }
+    .resume .resume-content .education .head{
+        color: white;
+        padding: 10px 0;
+        font-size: 32px;
+    }
+    .resume .resume-content .card{
+        background: #093429;
+        margin-bottom: 40px;
+        padding:10px 25em 10px 10px;
+    }
+    .resume .resume-content .card i{
+        background: #eca328;
+        color: #093429;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .resume .resume-content .card .row{
+        display: flex;
+        flex-direction: column;
+        margin-top: -3.5em;
+        margin-left: 2em;
+        padding: 20px;
+    }
+    .resume .resume-content .card .row h1{
+        color: white;
+    }
+    .resume .resume-content .skills{
+        width: 500px;
+        position: relative;
+    }
+    .resume .resume-content .bar{
+        position: relative;
+        display: flex;
+        margin: 20px 0;
+        padding: 10px 0;
+    }
+    .resume .resume-content .bar .name{
+        position: relative;
+        width: 110px;
+        text-align: right;
+        color: white;
+
+    }
+    .resume .resume-content .bar .value{
+        position: relative;
+        width: 40px;
+        text-align: left;
+        color: white;
+
+    }
+    .resume .resume-content .skills .bar .percent{
+        position: relative;
+        width: calc(100% - 150px);
+        height: 40px;
+        margin: 0 10px;
+        background: #494f56;
+        overflow: hidden;
+    }
+    .resume .resume-content .skills .bar .percent .progress{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background: #6ce5e8;
+        animation: animate 3s ease-in-out forwards;
+    }
+    @keyframes animate{
+        form{
+            width: 0;
+        }
+    }
+
+ 
+    
+
+
+      .resume .resume-content .lang{
+        width: 500px;
+        position: relative;
+    }
+    .resume .resume-content .lang .bar{
+        position: relative;
+        display: flex;
+        margin: 20px 0;
+        padding: 10px 0;
+    }
+    .resume .resume-content .lang .bar .name{
+        position: relative;
+        width: 110px;
+        text-align: right;
+        color: white;
+
+    }
+    .resume .resume-content .lang .bar .value{
+        position: relative;
+        width: 40px;
+        text-align: left;
+        color: white;
+
+    }
+    .resume .resume-content .lang .bar .percent{
+        position: relative;
+        width: calc(100% - 150px);
+        height: 40px;
+        border-radius: 20px;
+        margin: 0 10px;
+        background: #494f56;
+        overflow: hidden;
+    }
+    .resume .resume-content .lang .bar .percent .progress{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        border-radius: 20px;
+        height: 100%;
+        background: #6ce5e8;
+        animation: animate 3s ease-in-out forwards;
+    }
+    @keyframes animate{
+        form{
+            width: 0;
+        }
+    }
+
+
+    .soft-skills{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .soft{
+        display: grid;
+        grid-template-columns: repeat(3, 180px);
+        grid-gap: 40px;
+        margin: auto;
+        padding: 40px;
+    }
+    .soft-skills .box{
+        display: inline;
+        width: 100%;
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .soft-skills .box h2{
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .soft-skills .box .chart{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 160px;
+        height: 160px;
+    }
+    .soft-skills .box canvas{
+        position: absolute;
+        width: 100%;
+        top: 0;left: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  @media (max-width: 947px){
+    .resume .resume-content{
+        margin-left:-80px;
+        width: 100%;
+        margin-top: 80px;
+        color: white;
+    }
+    .resume .resume-content .education .card{
+        width: 100%;
+        padding: 0;
+    }
+    .resume .resume-content .skills{
+        padding: 0;
+        margin-left: -50px;
+    }
+    .resume .resume-content .skills .head{
+        margin-left: 30px;
+        padding: 0;
+    }
+    .resume .resume-content .soft{
+        grid-template-columns: 1fr;
+    }
+    .resume .resume-content .lang {
+        margin-left: -3em;
+    }
+    .resume .resume-content .lang .head {
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 690px) {
+   
+    .about .about-content h2{
+        font-size: 15px;
+    }
+    .about .about-content .head{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about .about-content h2{
+        font-size: 18px;
+    }
+    .home .home-content .head{
+        font-size: 14px;
+    }
+
+}
+
+
+.portfolio{
+    background: url(image/7.png) no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-family: "Be Vietnam Pro";
+    
+}
+.portfolio img{
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+}
+.portfolio .top{
+    position: relative;
+}
+.portfolio .top h3{
+    position: relative;
+    top:40px ;
+    left: 1%;
+    font-weight: 100;
+    font-size: 18px;
+}
+.portfolio p{
+    position: absolute;
+    left: 90%;
+}
+.portfolio p::before{
+    position: absolute;
+    content: "portfolio";
+    top: 90%;
+    left: 90%;
+}
+.port-content .head,
+.port-content h2{
+   display: flex;
+   font-size: 50px;
+   margin-left: 3em;
+}
+.port-content h2{
+    font-size: 25px;
+    background-color: #eca328;
+    width: 10%;
+    margin-left: 5.5em;
+    margin-bottom: 2.5em;
+    height: 40px;
+    border-radius: 20px;
+    padding-top: 2px;
+    padding-left: 28px;
+}
+.port-content .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: underline;
+    margin-left: 9em;
+}
+.port-content .content .box-bot a{ 
+    text-align: center;
+    color: white;     
+}
+.port-content .box a{ 
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* contact section styling */
+
+
+.contact{
+    background: url(image/9.png) no-repeat;
+    background-size: 100% 100%;
+    height: auto;
+    font-family: "Be Vietnam Pro";
+    color: white;
+  }
+  .contact .top{
+    position: relative;
+    margin-top: -2em;
+
+  }
+  .contact .top::before{
+    content: "contact";
+    position: absolute;
+    top: 80%;
+    left: 2%;
+  }
+  .contact .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+  }
+  ::placeholder{
+    color: rgba(255, 255, 255, 0.505);
+    font-size: 18px;
+  }
+  .form header{
+    line-height: 3em;
+    padding-bottom: 20px;
+  }
+  .form header h1{
+    font-size: 36px;
+  }
+  .form header p{
+    font-weight: 800;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.507);
+  }
+  
+  .form form input,
+  .form form textarea{
+    background-color: #86a135;
+    color: white;
+    resize: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 15px;
+  }
+  .form form .fields{
+    display: flex;
+  }
+  .form form .fields input{
+    width: 350px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  .form form textarea{
+    height: 120px;
+    padding: 20px;
+    width: 100%;
+  }
+  .form button{
+    background: #eca30a;
+    height: 50px;
+    color: wheat;
+    font-size: 18px;
+    width: 20%;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profile img{
+    margin-bottom: -8em;
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+  }
+  
+  .contact .form .contact-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7em;
+    text-align: justify;
+    padding-top: 30px;
+  }
+  .contact .form .contact-details a{
+    background-color: #093429;
+    margin: .5em;
+    padding: 8px 20px;
+    color: #279b7ea1;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+  .contact .form .contact-details a i{
+    background: #eca328;
+    padding: 10px;
+    border-radius: 50%;
+    color: #093429;
+    margin-right: 20px;
+  }
+
+
+/* footer section styling */
+footer{
+    background: #052214;
+    padding: 25px 23px;
+    color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 20px;
+}
+footer .name{
+    position: relative;
+    margin-left: 50px;
+}
+footer .name img{
+    position: absolute;
+    top: -1em;
+    width: 30%;
+    margin-left: -4em;
+}
+footer .name h1{
+    font-size: 18px;
+    letter-spacing: .1em;
+    
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .portfolio {
+        width: 100%;
+    }
+    .portfolio .port-content {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-left: -3em;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .contact .form form {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+        flex-direction: column;
+    }
+    .form form .fields{
+        flex-direction: column;
+    }
+    .form form button{
+        margin: 20px auto;
+       align-items: center;
+       width: 50%;
+       display: flex;
+       justify-content: center;
+    }
+    .portfolio .top p{
+        margin-left: -3em;
+    }
+    
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
